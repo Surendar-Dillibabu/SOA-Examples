@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sella.it/schema/Basics"
+            targetNamespace="http://www.sella.it/schema/Basics" elementFormDefault="qualified">
+  <xsd:complexType name="Banca">
+    <xsd:sequence>
+      <xsd:element name="ABI" type="xsd:string"/>
+      <xsd:element name="NomeBanca" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Succursale">
+    <xsd:sequence>
+      <xsd:element name="CAB" type="xsd:string"/>
+      <xsd:element name="NomeSuccursale" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Utente">
+    <xsd:sequence>
+      <xsd:element name="Codice" type="xsd:string"/>
+      <xsd:element name="Canale" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Servizi">
+    <xsd:sequence>
+      <xsd:element name="CodiceServizi" type="xsd:string"/>
+      <xsd:element name="DescrizioneServizi" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="MessageContext">
+    <xsd:sequence>
+      <xsd:element name="Sender" type="xsd:string"/>
+      <xsd:element name="ABI" type="xsd:string"/>
+      <xsd:element name="Auth-Token" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="OperationStatus">
+    <xsd:sequence>
+      <xsd:element name="Status" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="OperationResult">
+    <xsd:sequence>
+      <xsd:element name="Result" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="OperationFault">
+    <xsd:sequence>
+      <xsd:element name="FaultCode" type="xsd:string"/>
+      <xsd:element name="FaultString" type="xsd:string"/>
+      <xsd:element name="FaultActor" type="xsd:string"/>
+      <xsd:element name="Detail" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InvocationContext">
+    <xsd:sequence>
+      <xsd:element name="CodiciOperatore" type="xsd:string"/>
+      <xsd:element name="IPAddress" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ISIN">
+    <xsd:sequence>
+      <xsd:element name="code" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Email">
+    <xsd:sequence>
+      <xsd:element name="To" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="From" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Subject" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Message" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

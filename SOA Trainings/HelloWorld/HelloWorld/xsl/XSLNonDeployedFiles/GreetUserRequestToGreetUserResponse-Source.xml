@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<GreetUserRequest xmlns="http://www.sella.it/schema/Architecture/HelloWorld">
+   <firstName>firstName1</firstName>
+   <lastName>lastName2</lastName>
+</GreetUserRequest>

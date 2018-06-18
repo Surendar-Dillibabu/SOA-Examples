@@ -1,0 +1,47 @@
+<?xml version= '1.0' encoding= 'UTF-8' ?>
+<wsdl:definitions
+     name="HelloWorldProxy"
+     targetNamespace="http://www.sella.it/contract/Architecture/HelloWorld"
+     xmlns:tns="http://www.sella.it/contract/Architecture/HelloWorld"
+     xmlns:inp1="http://www.sella.it/schema/Architecture/HelloWorld"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    >
+    <wsdl:types>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://www.sella.it/schema/Architecture/HelloWorld" schemaLocation="../xsd/GreetUser.xsd"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="requestMessage">
+        <wsdl:part name="GreetUserRequestMessage" element="inp1:GreetUserRequest"/>
+    </wsdl:message>
+    <wsdl:message name="replyMessage">
+        <wsdl:part name="GreetUserResponseMessage" element="inp1:GreetUserResponse"/>
+    </wsdl:message>
+    <wsdl:message name="faultMessage">
+        <wsdl:part name="GreetUserFaultMessage" element="inp1:GreetUserFault"/>
+    </wsdl:message>
+    <wsdl:portType name="execute_ptt">
+        <wsdl:operation name="execute">
+            <wsdl:input message="tns:requestMessage"/>
+            <wsdl:output message="tns:replyMessage"/>
+            <wsdl:fault name="executefault" message="tns:faultMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="execute_bind" type="tns:execute_ptt">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="execute">
+            <soap:operation style="document" soapAction="execute"/>
+            <wsdl:input>
+                <soap:body use="literal" namespace="http://www.sella.it/contract/Architecture/HelloWorld"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" namespace="http://www.sella.it/contract/Architecture/HelloWorld"/>
+            </wsdl:output>
+            <wsdl:fault name="executefault">
+                <soap:fault name="executefault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+</wsdl:definitions>

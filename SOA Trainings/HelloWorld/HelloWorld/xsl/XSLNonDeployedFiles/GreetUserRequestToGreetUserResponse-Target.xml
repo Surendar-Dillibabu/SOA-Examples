@@ -1,0 +1,4 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ns0:GreetUserResponse xmlns:sb="http://www.sella.it/schema/Basics" xmlns:ns0="http://www.sella.it/schema/Architecture/HelloWorld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sella.it/schema/Architecture/HelloWorld file:/C:/JDeveloper/mywork/HelloWorld/HelloWorld/xsd/GreetUser.xsd">
+   <ns0:result>firstName1 lastName2</ns0:result>
+</ns0:GreetUserResponse>
