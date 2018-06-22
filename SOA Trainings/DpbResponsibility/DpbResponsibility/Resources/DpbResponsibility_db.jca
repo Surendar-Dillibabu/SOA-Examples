@@ -1,0 +1,13 @@
+<adapter-config name="DpbResponsibility" adapter="db" wsdlLocation="../wsdl/DpbResponsibility.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  
+  <connection-factory UIConnectionName="teorabe" location="eis/DB/OraBEDataSource"/>
+  <endpoint-interaction portType="DpbResponsibility_ptt" operation="DpbResponsibility">
+    <interaction-spec className="oracle.tip.adapter.db.DBStoredProcedureInteractionSpec">
+      <property name="SchemaName" value="WEBLOGIC_DBA"/>
+      <property name="PackageName" value="AED_PKG_RESPONSIBILITY"/>
+      <property name="ProcedureName" value="GET_RESPONSIBILITY"/>
+      <property name="GetActiveUnitOfWork" value="false"/>
+    </interaction-spec>
+  </endpoint-interaction>
+
+</adapter-config>

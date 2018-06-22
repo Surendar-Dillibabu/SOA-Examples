@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gr="http://www.sella.it/schema/Crediti/DpbResponsibility"
+            targetNamespace="http://www.sella.it/schema/Crediti/DpbResponsibility" elementFormDefault="qualified">
+  <xsd:element name="getResponsibilityRequest" type="gr:getResponsibilityRequestType">
+    <xsd:annotation>
+      <xsd:documentation>A sample element</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="getResponsibilityResponse" type="gr:getResponsibilityResponseType"/>
+  <xsd:complexType name="getResponsibilityRequestType">
+    <xsd:sequence>
+      <xsd:element name="unit_id" type="xsd:int"/>
+      <xsd:element name="bank_id" type="xsd:int"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="getResponsibilityResponseType">
+    <xsd:sequence>
+      <xsd:element name="CAPO_SUCCURSALE" type="xsd:string" />
+      <xsd:element name="VICE_CAPO_SUCCURSALE" type="xsd:string" />
+      <xsd:element name="CAPO_DISTRETTO" type="xsd:string" />
+      <xsd:element name="VICE_CAPO_DISTRETTO" type="xsd:string" />
+      <xsd:element name="CAPO_AREA" type="xsd:string" />
+      <xsd:element name="VICE_CAPO_AREA" type="xsd:string" />
+      <xsd:element name="CAPO_AREA_BUSINESS" type="xsd:string" />
+      <xsd:element name="RESP_EROGAZIONE_CREDITO" type="xsd:string" />
+      <xsd:element name="CREDITI_E_SMALLBUSINESS" type="xsd:string" />
+      <xsd:element name="CREDITI_E_SMALLBUSIN_DEDICATO" type="xsd:string" />
+      <xsd:element name="FAMILY" type="xsd:string" />
+      <xsd:element name="FAMILY_DEDICATO" type="xsd:string" />
+      <xsd:element name="AFFLUENT" type="xsd:string" />
+      <xsd:element name="AFFLUENT_DEDICATO" type="xsd:string" />
+      <xsd:element name="DI_SUPPORTO" type="xsd:string" />
+      <xsd:element name="ESTERO" type="xsd:string" />
+      <xsd:element name="CFD" type="xsd:string" />
+      <xsd:element name="CSF" type="xsd:string" />
+      <xsd:element name="CFI" type="xsd:string" />
+      <xsd:element name="CCR" type="xsd:string" />
+      <xsd:element name="UNIT_CODE" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

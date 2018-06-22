@@ -1,0 +1,17 @@
+Need to add below 2 operation in new SOA service
+Service Name : DpbResponsibility
+Operation name 1:
+This operation return the all responsibility information for given succursaleId and bankId.
+Operation name : getResponsibility
+Schema : weblogic_dba
+Package Name : aed_pkg_responsibility
+Function Name : get_responsibility(in_unit_id in number, in_bank_id in number) return aed_ty_unit_head
+Operation name 2:
+This operation return the responsibility of the given soggettoId,bankId and SuccursaleId.
+Operation name : getResponsibilityBySoggetto
+Schema : weblogic_dba
+Package Name : aed_pkg_responsibility
+Function Name : get_responsibility_by_soggetto(in_soggetto_id in number, in_bank_id in number,in_succursale_id in number) return varchar2
+New service should be commit under below SVN path:
+https://svn.bansel.it/h2o/Composite/ITCrediti/AED
+Component Name : DpbResponsibility

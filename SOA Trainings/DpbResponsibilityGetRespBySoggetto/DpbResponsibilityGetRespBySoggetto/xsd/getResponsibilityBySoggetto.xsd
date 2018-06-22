@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:grs="http://www.sella.it/schema/Crediti/getResponsibilityBySoggetto"
+            targetNamespace="http://www.sella.it/schema/Crediti/getResponsibilityBySoggetto"
+            elementFormDefault="qualified">
+  <xsd:element name="getResponsibilityBySoggettoRequest">
+    <xsd:annotation>
+      <xsd:documentation>A sample element</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="soggetto_id" type="xsd:int"/>
+        <xsd:element name="bank_id" type="xsd:int"/>
+        <xsd:element name="succursale_id" type="xsd:int"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="getResponsibilityBySoggettoResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="getResponsibilityBySoggettoResult" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

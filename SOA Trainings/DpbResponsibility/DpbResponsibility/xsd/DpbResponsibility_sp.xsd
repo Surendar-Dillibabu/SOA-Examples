@@ -1,0 +1,53 @@
+<schema targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/sp/DpbResponsibility" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:db="http://xmlns.oracle.com/pcbpel/adapter/db/sp/DpbResponsibility" elementFormDefault="qualified">
+   <element name="InputParameters">
+      <complexType>
+         <sequence>
+            <element name="IN_UNIT_ID" type="decimal" db:index="1" db:type="NUMBER" minOccurs="0" nillable="true"/>
+            <element name="IN_BANK_ID" type="decimal" db:index="2" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         </sequence>
+      </complexType>
+   </element>
+   <element name="OutputParameters">
+      <complexType>
+         <sequence>
+            <element name="GET_RESPONSIBILITY" type="db:WEBLOGIC_DBA.AED_TY_UNIT_HEAD" db:index="0" db:type="Struct" minOccurs="0" nillable="true"/>
+         </sequence>
+      </complexType>
+   </element>
+   <complexType name="WEBLOGIC_DBA.AED_TY_UNIT_HEAD">
+      <sequence>
+         <element name="CAPO_SUCCURSALE" type="db:string300" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="VICE_CAPO_SUCCURSALE" type="db:string300" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="CAPO_DISTRETTO" type="db:string300" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="VICE_CAPO_DISTRETTO" type="db:string300" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="CAPO_AREA" type="db:string300" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="VICE_CAPO_AREA" type="db:string300" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="CAPO_AREA_BUSINESS" type="db:string300" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="VICE_CAPO_AREA_BUSINESS" type="db:string300" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="RESP_EROGAZIONE_CREDITO" type="db:string300" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="CREDITI_E_SMALLBUSINESS" type="db:string300" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="CREDITI_E_SMALLBUSIN_DEDICATO" type="db:string300" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="FAMILY" type="db:string300" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="FAMILY_DEDICATO" type="db:string300" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="AFFLUENT" type="db:string300" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="AFFLUENT_DEDICATO" type="db:string300" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="DI_SUPPORTO" type="db:string300" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="ESTERO" type="db:string300" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="CFD" type="db:string300" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="CSF" type="db:string300" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="CFI" type="db:string300" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="CCR" type="db:string300" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="UNIT_CODE" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+      </sequence>
+   </complexType>
+   <simpleType name="string300">
+      <restriction base="string">
+         <maxLength value="300"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="string25">
+      <restriction base="string">
+         <maxLength value="25"/>
+      </restriction>
+   </simpleType>
+</schema>

@@ -1,0 +1,15 @@
+<wsdl:definitions targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/DpbResponsibilityGetRespBySoggetto/DpbResponsibilityGetRespBySoggetto/DpbResponsibilityGetRespBySoggetto" name="DpbResponsibilityGetRespBySoggetto-concrete" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    <wsdl:import location="DpbResponsibilityGetRespBySoggetto.wsdl" namespace="http://xmlns.oracle.com/pcbpel/adapter/db/DpbResponsibilityGetRespBySoggetto/DpbResponsibilityGetRespBySoggetto/DpbResponsibilityGetRespBySoggetto"/>
+    <wsdl:binding name="DpbResponsibilityGetRespBySoggetto_ptt-binding" type="dpb:DpbResponsibilityGetRespBySoggetto_ptt" xmlns:dpb="http://xmlns.oracle.com/pcbpel/adapter/db/DpbResponsibilityGetRespBySoggetto/DpbResponsibilityGetRespBySoggetto/DpbResponsibilityGetRespBySoggetto">
+        <soap:binding style="document" transport="http://www.bea.com/wli/sb/transports/jca"/>
+        <wsdl:operation name="DpbResponsibilityGetRespBySoggetto">
+            <soap:operation soapAction="DpbResponsibilityGetRespBySoggetto"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+</wsdl:definitions>
